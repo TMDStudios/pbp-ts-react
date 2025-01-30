@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Consolas','Trebuchet MS', 'Lucida Sans Unicode', Verdana, sans-serif, Arial;
+}
+body {
+  background-color: rgb(33,33,33);
+  color: lightgreen;
+  min-width: 640px;
+  max-width: 1080px;
+  height: 96vh;
+  margin: auto;
+}

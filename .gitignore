@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+
+# Build outputs (Vite)
+dist/
+dist-ssr/
+.out/
+.cache/
+.temp/
+
+# Vite-specific files
+.vite/          # Vite's local cache
+*.env.local     # Local environment variables
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# TypeScript
+*.tsbuildinfo   # TypeScript incremental build cache
+
+# Editor directories and system files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing and coverage reports
+coverage/
+.nyc_output/
+
+# macOS system files
+._*
