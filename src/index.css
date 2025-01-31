@@ -12,3 +12,64 @@ body {
   height: 96vh;
   margin: auto;
 }
+h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+button {
+  color: lightgreen;
+  background-color: rgb(33,33,33);
+  border: 1px solid lightgreen;
+  width: 25ch;
+  padding: 2px 0;
+}
+button:hover {
+  background-color: lightgreen;
+  color: rgb(33,33,33);
+  cursor: pointer;
+}
+.app {
+  border: 1px solid lightgreen;
+  height: 80vh;
+  padding: 2rem;
+}
+hr {
+  margin: 1rem 0;
+  border: none;
+  height: 1px;
+  background-color: lightgreen;
+}
+.intro, .message {
+  margin: 1rem 0;
+}
+input {
+  color: lightgreen;
+  border: 1px solid lightgreen;
+  border-radius: 4px;
+  background-color: rgb(33,33,33);
+  width: 10ch;
+  padding: 4px 12px;
+  font-weight: bold;
+}
+input {
+  padding: 4px 16px;
+}
+input:hover {
+  background-color: lightgreen;
+  color: rgb(33,33,33);
+}
+input::placeholder {
+  color: snow;
+}
+.submitBtn {
+  margin-left: 1rem;
+}
+.resetButton {
+  border-radius: 4px;
+  width: 22ch;
+}
