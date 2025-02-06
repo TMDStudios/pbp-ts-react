@@ -12,13 +12,13 @@ function Calculator() {
         e.preventDefault();
         // console.log(savedValue, operator, newValue)
         if(numbers.includes(key)){
-            if(newValue === '0') return; // Prevent leading zeros
+            if(newValue === '0' && key !== '.') return; // Prevent leading zeros
             setNewValue(newValue+key);
             setDisplayValue(newValue+key);
         }else if(operators.includes(key)){
             if(operator.length===0){
                 setOperator(key);
-                if(newValue !== '') setSavedValue(parseInt(newValue));
+                if(newValue !== '') setSavedValue(parseFloat(newValue));
                 setNewValue('');
             }else{
                 const temp = calculate();
@@ -37,11 +37,11 @@ function Calculator() {
             }
         }else if(key==='+/-'){
             if(newValue.length>0){
-                setNewValue((parseInt(newValue)*-1).toString());
-                setDisplayValue((parseInt(newValue)*-1).toString());
+                setNewValue((parseFloat(newValue)*-1).toString());
+                setDisplayValue((parseFloat(newValue)*-1).toString());
             }
         }else if(key==='.'){
-            console.log("Add later");
+            if(!newValue.includes('.')) setNewValue(newValue+'.');
         }else if(key==='='){
             const temp = calculate();
             setSavedValue(temp);
@@ -52,23 +52,32 @@ function Calculator() {
     };
 
     const calculate = () => {
+        let num = newValue ? parseFloat(newValue) : 0;
+        let result: number;
         switch(operator){
             case '+':
-                return savedValue + parseInt(newValue);
+                result = savedValue + num;
+                break;
             case '-':
-                return savedValue - parseInt(newValue);
+                result = savedValue - num;
+                break;
             case '*':
-                return savedValue * parseInt(newValue);
+                result = savedValue * num;
+                break;
             case '/':
-                if(savedValue===0 || parseInt(newValue)===0){ // Zero division
+                if(savedValue === 0 || num === 0){
                     setDisplayValue('Error');
                     return 0;
                 }
-                return savedValue / parseInt(newValue);
+                result = savedValue / num;
+                break;
             default:
-                return savedValue % parseInt(newValue);
+                result = savedValue % num;
+                break;
         }
-    }
+        
+        return parseFloat(result.toFixed(10));
+    };
 
     const reset = () => {
         setSavedValue(0);
