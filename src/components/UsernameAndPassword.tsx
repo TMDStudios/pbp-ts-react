@@ -65,6 +65,7 @@ function UsernameAndPassword() {
             <div className='appForm'>
                 <form onSubmit={handleSubmit}>
                     <input 
+                    className='wideText'
                     placeholder='Username' 
                     type="text" 
                     value={username} 
@@ -74,6 +75,7 @@ function UsernameAndPassword() {
                     }} 
                     required />
                     <input 
+                    className='wideText'
                     placeholder='Password' 
                     type="password" 
                     value={password} 

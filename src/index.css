@@ -33,6 +33,18 @@ button:hover {
   color: rgb(33,33,33);
   cursor: pointer;
 }
+h3 {
+  margin-bottom: 1rem;
+}
+a {
+  text-decoration: none;
+  color: lightgreen;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(33, 233, 33);
+}
 .app {
   border: 1px solid lightgreen;
   height: 80vh;
@@ -89,4 +101,10 @@ input::placeholder {
   padding-right: 1rem;
   font-size: 1.5rem;
   margin: 2rem 0;
+}
+.wideText {
+  width: 20ch;
+}
+.extraWideText {
+  width: 33ch;
 }

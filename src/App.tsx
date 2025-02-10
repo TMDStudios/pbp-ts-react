@@ -19,7 +19,14 @@ function App() {
       case 4:
         return <UsernameAndPassword />;
       default:
-        return <p>Select an app to start</p>;
+        return (
+          <>
+            <h3>Welcome to PBP TypeScript React</h3>
+            <p>Select an app to start</p>
+            <hr />
+            <p>Source code: <a href="https://github.com/TMDStudios/pbp-ts-react">https://github.com/TMDStudios/pbp-ts-react</a></p>
+          </>
+        );
     }
   };
 
